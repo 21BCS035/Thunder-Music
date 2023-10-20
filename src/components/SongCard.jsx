@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 
 const SongCard = ({song,i,isPlaying,activeSong,data}) =>{
    const dispatch = useDispatch();
+
   const handlePauseClick = ()=>{
       dispatch(playPause(false))
   }
@@ -29,7 +30,7 @@ const SongCard = ({song,i,isPlaying,activeSong,data}) =>{
       />
      </div>
     
-     <img alt="song_img" src={song?.photo_url}/>
+      <img alt="song_img" src={song.images?.coverart} className="w-full h-full rounded-lg" />
    </div>
    <div className="mt-4 flex flex-col">
      <p className="font-semibold text-lg text-white truncate">
